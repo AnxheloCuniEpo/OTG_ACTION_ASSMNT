@@ -1,0 +1,87 @@
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/UI.xml">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Communication.xml">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/sap/ZHR_ORG_ASSMT_ACTIONS_SRV/$metadata">
+        <edmx:Include Namespace="ZHR_ORG_ASSMT_ACTIONS_SRV"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="local">
+            <!-- Default LineItem definition -->
+            <Annotations Target="ZHR_ORG_ASSMT_ACTIONS_SRV.Org_Assessment">
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Pernr"/>
+                            <PropertyValue Property="Label" String="Personnel Number"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Begda"/>
+                            <PropertyValue Property="Label" String="Start Date"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Endda"/>
+                            <PropertyValue Property="Label" String="End Date"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Bukrs"/>
+                            <PropertyValue Property="Label" String="Company Code"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Kostl"/>
+                            <PropertyValue Property="Label" String="Cost Center"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+                  <Annotations Target="ZHR_ORG_ASSMT_ACTIONS_SRV.Org_Actions">
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Personnelnumber"/>
+                            <PropertyValue Property="Label" String="{@i18n>personnelNumber}"/>
+                        </Record>
+                         <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Client"/>
+                            <PropertyValue Property="Label" String="Client"/>
+                        </Record>
+                         <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Actiontype"/>
+                            <PropertyValue Property="Label" String="Action Type"/>
+                        </Record>
+                         <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Mandt"/>
+                            <PropertyValue Property="Label" String="Mandt"/>
+                        </Record>
+                         <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Referenceexists"/>
+                            <PropertyValue Property="Label" String="REferen"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Startdate"/>
+                            <PropertyValue Property="Label" String="{@i18n>startDate}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Enddate"/>
+                            <PropertyValue Property="Label" String="{@i18n>endDate}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Client"/>
+                            <PropertyValue Property="Label" String="{@i18n>companyCode}"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Confirmationfieldsexist"/>
+                            <PropertyValue Property="Label" String="{@i18n>costCenter}"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

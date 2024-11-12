@@ -1,0 +1,41 @@
+{
+    "fileName": "id_1731436135916_83_propertyChange",
+    "fileType": "change",
+    "changeType": "propertyChange",
+    "moduleName": "",
+    "reference": "orgactionsassmnt",
+    "packageName": "",
+    "content": {
+        "property": "showClearOnFB",
+        "newValue": true
+    },
+    "selector": {
+        "id": "orgactionsassmnt::sap.suite.ui.generic.template.ListReport.view.ListReport::Org_AssessmentSet--listReportFilter",
+        "idIsLocal": false,
+        "type": "sap.ui.comp.smartfilterbar.SmartFilterBar"
+    },
+    "layer": "CUSTOMER_BASE",
+    "texts": {},
+    "namespace": "apps/orgactionsassmnt/changes/",
+    "projectId": "",
+    "creation": 1731436135916,
+    "originalLanguage": "",
+    "support": {
+        "generator": "changeUtils: SAPFioriTools",
+        "service": "",
+        "user": "",
+        "sapui5Version": "1.71.62",
+        "sourceChangeFileName": "",
+        "compositeCommand": ""
+    },
+    "oDataInformation": {},
+    "dependentSelector": {},
+    "validAppVersions": {
+        "from": "0.0.1",
+        "to": "0.0.1",
+        "creation": "0.0.1"
+    },
+    "jsOnly": false,
+    "variantReference": "",
+    "appDescriptorChange": false
+}
