@@ -128,6 +128,7 @@
           "name": "sap.suite.ui.generic.template.ListReport",
           "list": true,
           "settings": {
+            "smartVariantManagement": true,
             "condensedTableLayout": true,
             "enableTableFilterInPageVariant": false,
             "filterSettings": {
