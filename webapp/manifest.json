@@ -151,12 +151,11 @@
                   "entitySet": "Org_AssessmentSet",
                   "showItemNavigationOnChart": true,
                   "key": "ASSESMENT",
-                  "annotationPath": "Org_Assessment",
-                  "text": "Assesments"
+                  "annotationPath": "com.sap.vocabularies.UI.v1.SelectionPresentationVariant#ASMNTT"
                 }
               },
               "enableAutoBinding": true,
-              "showCounts": true
+              "showCounts": false
             }
           }
         },
