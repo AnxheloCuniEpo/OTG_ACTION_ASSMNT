@@ -14,6 +14,9 @@
     <edmx:DataServices>
         <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="local">
             <!-- Default LineItem definition -->
+
+
+
             <Annotations Target="ZHR_ORG_ASSMT_ACTIONS_SRV.Org_Assessment">
                 <Annotation Term="UI.LineItem">
                     <Collection>
@@ -40,7 +43,50 @@
                     </Collection>
                 </Annotation>
             </Annotations>
+
+
+
+
+
                   <Annotations Target="ZHR_ORG_ASSMT_ACTIONS_SRV.Org_Actions">
+
+        <Annotation Term="UI.SelectionPresentationVariant" Qualifier="ACTIONSSS">
+        <Record Type="UI.SelectionPresentationVariantType">
+            <PropertyValue Property="Text" String="Organisational Actions"/>
+            <PropertyValue Property="SelectionVariant">
+                <Record Type="UI.SelectionVariantType">
+                    <PropertyValue Property="SelectOptions">
+                        <Collection>
+                            <Record Type="UI.SelectOptionType">
+                                <PropertyValue Property="PropertyName" PropertyPath="Personnelnumber"/>
+                                <PropertyValue Property="Ranges">
+                                    <Collection>
+                                        <Record Type="UI.SelectionRangeType">
+                                            <PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I"/>
+                                            <PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ"/>
+                                            <PropertyValue Property="Low" String="123"/>
+                                        </Record>
+                                    </Collection>
+                                </PropertyValue>
+                            </Record>
+                        </Collection>
+                    </PropertyValue>
+                </Record>
+            </PropertyValue>
+            <PropertyValue Property="PresentationVariant">
+                <Record Type="UI.PresentationVariantType">
+                    <PropertyValue Property="Visualizations">
+                        <Collection>
+                            <AnnotationPath>@UI.LineItem</AnnotationPath>
+                        </Collection>
+                    </PropertyValue>
+                </Record>
+            </PropertyValue>
+        </Record>
+    </Annotation>
+
+
+
                 <Annotation Term="UI.LineItem">
                     <Collection>
                         <Record Type="UI.DataField">

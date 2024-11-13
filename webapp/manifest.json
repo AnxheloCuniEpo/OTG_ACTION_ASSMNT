@@ -145,8 +145,7 @@
                   "entitySet": "Org_ActionsSet",
                   "showItemNavigationOnChart": true,
                   "key": "ActionVar",
-                  "annotationPath": "Org_Actions",
-                  "text": "Actions"
+                  "annotationPath": "com.sap.vocabularies.UI.v1.SelectionPresentationVariant#ACTIONSSS"
                 },
                 "ASSESMENT VARIANT": {
                   "entitySet": "Org_AssessmentSet",
