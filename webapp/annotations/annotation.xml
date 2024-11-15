@@ -1,170 +1,180 @@
 <edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
-    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
-        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
-    </edmx:Reference>
     <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/UI.xml">
-        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
-    </edmx:Reference>
-    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Communication.xml">
-        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI" />
     </edmx:Reference>
     <edmx:Reference Uri="/sap/opu/odata/sap/ZHR_ORG_ASSMT_ACTIONS_SRV/$metadata">
-        <edmx:Include Namespace="ZHR_ORG_ASSMT_ACTIONS_SRV"/>
+        <edmx:Include Namespace="ZHR_ORG_ASSMT_ACTIONS_SRV" />
     </edmx:Reference>
     <edmx:DataServices>
         <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="local">
             <!-- Default LineItem definition -->
 
-
-
             <Annotations Target="ZHR_ORG_ASSMT_ACTIONS_SRV.Org_Assessment">
-
- <Annotation Term="UI.SelectionPresentationVariant" Qualifier="ASMNTT">
-        <Record Type="UI.SelectionPresentationVariantType">
-            <PropertyValue Property="Text" String="Organisational Assesssment "/>
-            <PropertyValue Property="SelectionVariant">
-                <Record Type="UI.SelectionVariantType">
-                    <PropertyValue Property="SelectOptions">
-                        <Collection>
-                            <Record Type="UI.SelectOptionType">
-                                <PropertyValue Property="PropertyName" PropertyPath="Pernr"/>
-                                <PropertyValue Property="Ranges">
+                <Annotation Term="UI.SelectionPresentationVariant" Qualifier="ASMNTT">
+                    <Record Type="UI.SelectionPresentationVariantType">
+                        <PropertyValue Property="Text" String="Organisational Assesssment " />
+                        <PropertyValue Property="SelectionVariant">
+                            <Record Type="UI.SelectionVariantType">
+                                <PropertyValue Property="SelectOptions">
                                     <Collection>
-                                        <Record Type="UI.SelectionRangeType">
-                                            <PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I"/>
-                                            <PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ"/>
-                                            <PropertyValue Property="Low" String="123"/>
+                                        <Record Type="UI.SelectOptionType">
+                                            <PropertyValue Property="PropertyName" PropertyPath="Pernr" />
+                                            <PropertyValue Property="Ranges">
+                                                <Collection>
+                                                    <Record Type="UI.SelectionRangeType">
+                                                        <PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I" />
+                                                        <PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ" />
+                                                        <PropertyValue Property="Low" String="123" />
+                                                    </Record>
+                                                </Collection>
+                                            </PropertyValue>
                                         </Record>
                                     </Collection>
                                 </PropertyValue>
                             </Record>
-                        </Collection>
-                    </PropertyValue>
-                </Record>
-            </PropertyValue>
-            <PropertyValue Property="PresentationVariant">
-                <Record Type="UI.PresentationVariantType">
-                    <PropertyValue Property="Visualizations">
-                        <Collection>
-                            <AnnotationPath>@UI.LineItem</AnnotationPath>
-                        </Collection>
-                    </PropertyValue>
-                </Record>
-            </PropertyValue>
-        </Record>
-    </Annotation>
-
-
+                        </PropertyValue>
+                        <PropertyValue Property="PresentationVariant">
+                            <Record Type="UI.PresentationVariantType">
+                                <PropertyValue Property="Visualizations">
+                                    <Collection>
+                                        <AnnotationPath>@UI.LineItem</AnnotationPath>
+                                    </Collection>
+                                </PropertyValue>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
 
                 <Annotation Term="UI.LineItem">
                     <Collection>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Pernr"/>
-                            <PropertyValue Property="Label" String="Personnel Number"/>
+                            <PropertyValue Property="Value" Path="Pernr" />
+                            <PropertyValue Property="Label" String="Personnel Number" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Begda"/>
-                            <PropertyValue Property="Label" String="Start Date"/>
+                            <PropertyValue Property="Value" Path="Begda" />
+                            <PropertyValue Property="Label" String="Start Date" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Endda"/>
-                            <PropertyValue Property="Label" String="End Date"/>
+                            <PropertyValue Property="Value" Path="Endda" />
+                            <PropertyValue Property="Label" String="End Date" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Bukrs"/>
-                            <PropertyValue Property="Label" String="Company Code"/>
+                            <PropertyValue Property="Value" Path="Bukrs" />
+                            <PropertyValue Property="Label" String="Company Code" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Kostl"/>
-                            <PropertyValue Property="Label" String="Cost Center"/>
+                            <PropertyValue Property="Value" Path="Kostl" />
+                            <PropertyValue Property="Label" String="Cost Center" />
                         </Record>
                     </Collection>
                 </Annotation>
             </Annotations>
 
-
-
-
-
-                  <Annotations Target="ZHR_ORG_ASSMT_ACTIONS_SRV.Org_Actions">
-
-        <Annotation Term="UI.SelectionPresentationVariant" Qualifier="ACTIONSSS">
-        <Record Type="UI.SelectionPresentationVariantType">
-            <PropertyValue Property="Text" String="Organisational Actions"/>
-            <PropertyValue Property="SelectionVariant">
-                <Record Type="UI.SelectionVariantType">
-                    <PropertyValue Property="SelectOptions">
-                        <Collection>
-                            <Record Type="UI.SelectOptionType">
-                                <PropertyValue Property="PropertyName" PropertyPath="Personnelnumber"/>
-                                <PropertyValue Property="Ranges">
+            <Annotations Target="ZHR_ORG_ASSMT_ACTIONS_SRV.Org_Actions">
+                <Annotation Term="UI.SelectionPresentationVariant" Qualifier="ACTIONSSS">
+                    <Record Type="UI.SelectionPresentationVariantType">
+                        <PropertyValue Property="Text" String="Organisational Actions" />
+                        <PropertyValue Property="SelectionVariant">
+                            <Record Type="UI.SelectionVariantType">
+                                <PropertyValue Property="SelectOptions">
                                     <Collection>
-                                        <Record Type="UI.SelectionRangeType">
-                                            <PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I"/>
-                                            <PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ"/>
-                                            <PropertyValue Property="Low" String="123"/>
+                                        <Record Type="UI.SelectOptionType">
+                                            <PropertyValue Property="PropertyName" PropertyPath="Personnelnumber" />
+                                            <PropertyValue Property="Ranges">
+                                                <Collection>
+                                                    <Record Type="UI.SelectionRangeType">
+                                                        <PropertyValue Property="Sign" EnumMember="UI.SelectionRangeSignType/I" />
+                                                        <PropertyValue Property="Option" EnumMember="UI.SelectionRangeOptionType/EQ" />
+                                                        <PropertyValue Property="Low" String="123" />
+                                                    </Record>
+                                                </Collection>
+                                            </PropertyValue>
                                         </Record>
                                     </Collection>
                                 </PropertyValue>
                             </Record>
-                        </Collection>
-                    </PropertyValue>
-                </Record>
-            </PropertyValue>
-            <PropertyValue Property="PresentationVariant">
-                <Record Type="UI.PresentationVariantType">
-                    <PropertyValue Property="Visualizations">
-                        <Collection>
-                            <AnnotationPath>@UI.LineItem</AnnotationPath>
-                        </Collection>
-                    </PropertyValue>
-                </Record>
-            </PropertyValue>
-        </Record>
-    </Annotation>
-
-
-
+                        </PropertyValue>
+                        <PropertyValue Property="PresentationVariant">
+                            <Record Type="UI.PresentationVariantType">
+                                <PropertyValue Property="Visualizations">
+                                    <Collection>
+                                        <AnnotationPath>@UI.LineItem</AnnotationPath>
+                                    </Collection>
+                                </PropertyValue>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+<!-- Line Items -->
                 <Annotation Term="UI.LineItem">
                     <Collection>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Personnelnumber"/>
-                            <PropertyValue Property="Label" String="{@i18n>personnelNumber}"/>
-                        </Record>
-                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Client"/>
-                            <PropertyValue Property="Label" String="Client"/>
-                        </Record>
-                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Actiontype"/>
-                            <PropertyValue Property="Label" String="Action Type"/>
-                        </Record>
-                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Mandt"/>
-                            <PropertyValue Property="Label" String="Mandt"/>
-                        </Record>
-                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Referenceexists"/>
-                            <PropertyValue Property="Label" String="REferen"/>
+                            <PropertyValue Property="Value" Path="Personnelnumber" />
+                            <PropertyValue Property="Label" String="{@i18n>personnelNumber}" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Startdate"/>
-                            <PropertyValue Property="Label" String="{@i18n>startDate}"/>
+                            <PropertyValue Property="Value" Path="Clientnumber" />
+                            <PropertyValue Property="Label" String="Client" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Enddate"/>
-                            <PropertyValue Property="Label" String="{@i18n>endDate}"/>
+                            <PropertyValue Property="Value" Path="Actiontype" />
+                            <PropertyValue Property="Label" String="Action Type" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Client"/>
-                            <PropertyValue Property="Label" String="{@i18n>companyCode}"/>
+                            <PropertyValue Property="Value" Path="Mandt" />
+                            <PropertyValue Property="Label" String="Mandt" />
                         </Record>
                         <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="Confirmationfieldsexist"/>
-                            <PropertyValue Property="Label" String="{@i18n>costCenter}"/>
+                            <PropertyValue Property="Value" Path="Referenceexists" />
+                            <PropertyValue Property="Label" String="REferen" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Startdate" />
+                            <PropertyValue Property="Label" String="{@i18n>startDate}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Enddate" />
+                            <PropertyValue Property="Label" String="{@i18n>endDate}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Clientnumber" />
+                            <PropertyValue Property="Label" String="{@i18n>companyCode}" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Confirmationfieldsexist" />
+                            <PropertyValue Property="Label" String="{@i18n>costCenter}" />
                         </Record>
                     </Collection>
                 </Annotation>
+                <!-- Selection Fields filters -->
+                <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>Personnelnumber</PropertyPath>
+                    </Collection>
+                </Annotation>
+                <!-- Header of the UI -->
+                <Annotation Term="UI.HeaderInfo">
+                    <Record Type="UI.HeaderInfoType">
+                        <PropertyValue Property="TypeName" String="Action Detail" />
+                        <PropertyValue Property="TypeNamePlural" String="Action Details" />
+                        <PropertyValue Property="Title">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Label" String="Personal Number" />
+                                <PropertyValue Property="Value" Path="Personnelnumber" />
+                            </Record>
+                        </PropertyValue>
+                        <PropertyValue Property="Description">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Label" String="Action Type" />
+                                <PropertyValue Property="Value" Path="Actiontype" />
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <!-- Section of the data on object page -->
+
+
             </Annotations>
         </Schema>
     </edmx:DataServices>

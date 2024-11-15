@@ -1,5 +1,3 @@
-# yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
-
 specVersion: "3.1"
 metadata:
   name: orgactionsassmnt
@@ -16,10 +14,11 @@ builder:
         target:
           destination: ST1
           url: http://st1appserver.hec.epo.org:44399
-          client: '100'
+          client: "100"
         app:
           name: LOCAL
+          description: Deployment of the org_actions_assnmt
           package: $TMP
-          transport: REPLACE_WITH_TRANSPORT
+          transport: ST1K900152
         exclude:
           - /test/
